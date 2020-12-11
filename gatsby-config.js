@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Kuba Matjanowski`,
     author: {
-      name: `Kyle Mathews`,
+      name: `Kuba Matjanowski`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `Kuba Matjanowski portfolio site`,
+    siteUrl: `https://matjanowski.pl/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `matanos`,
     },
   },
   plugins: [
