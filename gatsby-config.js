@@ -51,11 +51,24 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-plugin-google-tagmanager",
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        id: "G-BK7KCKTNE3",
-        includeInDevelopment: true,
-        defaultDataLayer: { platform: "gatsby" },
+        trackingId: "UA-30410601-1",
+        head: false,
+        anonymize: false,
+        respectDNT: true,
+        exclude: [],
+        pageTransitionDelay: 0,
+        // Enables Google Optimize using your container Id
+        //optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
+        // Enables Google Optimize Experiment ID
+        //experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
+        // Set Variation ID. 0 for original 1,2,3....
+        //variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
+        defer: false,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "example.com",
       },
     },
     `gatsby-plugin-feed`,
