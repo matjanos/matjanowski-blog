@@ -19,7 +19,7 @@ const Layout = ({ location, title, children }) => {
       }
     }
     `)
-  let header, mainLink
+  let header, mainLink, footer;
 
   if (isRootPath) {
     header = (
@@ -28,6 +28,9 @@ const Layout = ({ location, title, children }) => {
   }
   else {
     mainLink = (<Link to="/">{data.site.siteMetadata.author.name}</Link>)
+    footer = <footer>
+      © {new Date().getFullYear()} Matjanowski
+  </footer>
   }
 
   return (
@@ -39,9 +42,7 @@ const Layout = ({ location, title, children }) => {
       </div>
       <header className="global-header">{header}</header>
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()} Jakub Matjanowski, Isidore Software
-      </footer>
+      {footer}
     </div>
   )
 }

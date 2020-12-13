@@ -84,11 +84,11 @@ body {
   color: var(--color-text);
   background-image: var(--background-image);
 }
-
 footer {
   padding: var(--spacing-6) var(--spacing-0);
   color: var(--color-text-light);
-  font-size: 0.9em;
+  font-size: small;
+  text-align: center;
 }
 
 hr {
@@ -217,7 +217,7 @@ li > ul {
 
 blockquote {
   color: var(--color-text-light);
-  margin-left: calc(-1 * var(--spacing-6));
+  background-color: #fff9f8;
   margin-right: var(--spacing-8);
   padding: var(--spacing-2) var(--spacing-2) var(--spacing-2) var(--spacing-6);
   border-left: var(--spacing-1) solid var(--color-primary);
@@ -233,6 +233,7 @@ blockquote > :last-child {
 blockquote > footer{
   font-size: 0.8em;
   padding: 0;
+  text-align: left;
 }
 
 blockquote > ul,
@@ -350,7 +351,9 @@ a:focus {
   text-transform: uppercase;
   font-family: var(--fontFamily-sans);
 }
-
+.area-head{
+  font-weight: bold;
+}
 /* Media queries */
 
 @media (max-width: 42rem) {
