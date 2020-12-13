@@ -3,7 +3,7 @@ title: Managing options and secrets in .NET Core and Docker
 date: "2017-03-18"
 ---
 
-The syntactic sugars are helpful features of C## language. We can use `using(var tmp = new ...()) {}` instead of `Dispose()`, we have common `foreach` instead of `while` loop with iterating enumerator, and we have `await` and `async`. But think a while… do we really need `async` word?
+The syntactic sugars are helpful features of C# language. We can use `using(var tmp = new ...()) {}` instead of `Dispose()`, we have common `foreach` instead of `while` loop with iterating enumerator, and we have `await` and `async`. But think a while… do we really need `async` word?
 
 ## The world without async
 
@@ -86,7 +86,7 @@ This piece of code seems to be valid in older .NET, but if we want to use asychr
 Essentially that’s the reason why Microsoft introduced `async` – to keep backward compatibility by enforcing implicit declaration that a method invokes asynchronous code.
 
 ## `async` as a variable name
-I like simple syntax in languages, so I believe that this artificial impediment could be avoided, but being more restrictive on upgrading to C## 5. The simple solution is just forbidding to use await keyword as a variable identifier. Microsoft didn’t do that, so we can have a method like this, which has valid syntax:
+I like simple syntax in languages, so I believe that this artificial impediment could be avoided, but being more restrictive on upgrading to C# 5. The simple solution is just forbidding to use await keyword as a variable identifier. Microsoft didn’t do that, so we can have a method like this, which has valid syntax:
 
 ```csharp
 public static int Test(int await)
