@@ -84,11 +84,27 @@ body {
   color: var(--color-text);
   background-image: var(--background-image);
 }
+
 footer {
   padding: var(--spacing-6) var(--spacing-0);
   color: var(--color-text-light);
   font-size: small;
   text-align: center;
+}
+
+footer>.socials {
+  margin-top: 10px;
+}
+
+footer>.socials>a {
+  font-size: x-large;
+  padding: 10px;
+  color: var(--color-text)
+}
+
+
+footer>.socials>a:hover {
+  color: var(--color-primary)
 }
 
 hr {
@@ -147,16 +163,16 @@ h6 {
   font-size: var(--fontSize-1);
 }
 
-h1 > a {
+h1>a {
   color: inherit;
   text-decoration: none;
 }
 
-h2 > a,
-h3 > a,
-h4 > a,
-h5 > a,
-h6 > a {
+h2>a,
+h3>a,
+h4>a,
+h5>a,
+h6>a {
   text-decoration: none;
   color: inherit;
 }
@@ -165,7 +181,7 @@ nav {
   text-align: right;
 }
 
-nav > a{
+nav>a {
   margin-right: var(--spacing-6);
   color: var(--color-text);
   font-weight: bolder;
@@ -173,9 +189,10 @@ nav > a{
   text-decoration: none;
 }
 
-nav > a:hover{
+nav>a:hover {
   color: var(--color-primary);
 }
+
 /* Prose */
 
 p {
@@ -202,7 +219,7 @@ ol li {
   margin-bottom: calc(var(--spacing-8) / 2);
 }
 
-li > p {
+li>p {
   margin-bottom: calc(var(--spacing-8) / 2);
 }
 
@@ -210,7 +227,7 @@ li *:last-child {
   margin-bottom: var(--spacing-0);
 }
 
-li > ul {
+li>ul {
   margin-left: var(--spacing-8);
   margin-top: calc(var(--spacing-8) / 2);
 }
@@ -225,22 +242,23 @@ blockquote {
   font-style: italic;
   margin-bottom: var(--spacing-8);
 }
-blockquote > p {
+
+blockquote>p {
   margin-bottom: var(--spacing-5);
 }
 
-blockquote > :last-child {
+blockquote> :last-child {
   margin-bottom: var(--spacing-0);
 }
 
-blockquote > footer{
+blockquote>footer {
   font-size: 0.8em;
   padding: 0;
   text-align: left;
 }
 
-blockquote > ul,
-blockquote > ol {
+blockquote>ul,
+blockquote>ol {
   list-style-position: inside;
 }
 
@@ -272,11 +290,11 @@ a:focus {
   margin-bottom: var(--spacing-5);
 }
 
-.navigation > nav {
+.navigation>nav {
   float: right;
 }
 
-.navigation > a {
+.navigation>a {
   float: left;
   font-weight: bold;
   text-decoration: none;
@@ -348,15 +366,17 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
-.author-name-header{
-  color:var(--color-primary);
-  font-size:2.5em;
+.author-name-header {
+  color: var(--color-primary);
+  font-size: 2.5em;
   text-transform: uppercase;
   font-family: var(--fontFamily-sans);
 }
-.area-head{
+
+.area-head {
   font-weight: bold;
 }
+
 /* Media queries */
 
 @media (max-width: 42rem) {
@@ -364,6 +384,7 @@ a:focus {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
     margin-left: var(--spacing-0);
   }
+
   ul,
   ol {
     list-style-position: inside;
