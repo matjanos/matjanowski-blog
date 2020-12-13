@@ -7,13 +7,6 @@ const Header = () => {
 
     const data = useStaticQuery(graphql`
     query {
-      avatar: file(absolutePath: { regex: "/profile.jpg/" }) {
-        childImageSharp {
-          fixed(width: 200, height: 200, quality: 95) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
       site {
         siteMetadata {
           author {
@@ -31,6 +24,7 @@ const name = data.site.siteMetadata.author.name;
         <Avatar />
         <div>Hi, my name is</div>
         <div className='author-name-header'>{name}</div>
+        <div>and I'm really glad that you are here!</div>
     </div>)
 }
 

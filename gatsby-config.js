@@ -11,8 +11,7 @@ module.exports = {
       twitter: `matanos`,
     },
   },
-  plugins: [
-    {
+  plugins: [{
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
@@ -29,8 +28,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          {
+        plugins: [{
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,
@@ -53,9 +51,11 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        id: "G-BK7KCKTNE3",
-        includeInDevelopment: true,
-        defaultDataLayer: { platform: "gatsby" },
+        id: "GTM-WN9CZ9L",
+        includeInDevelopment: false,
+        defaultDataLayer: {
+          platform: "gatsby"
+        }
       },
     },
     `gatsby-plugin-feed`,

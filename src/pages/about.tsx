@@ -46,19 +46,19 @@ const MeComponent: React.FC<PageProps<DataProps>> = ({
             To have a pleasent conversation we should have a background about our
             interests and hobbies! Here are some of mine:
             <ul>
-                <li><span>Software Engineering, IT Management</span> -
+                <li><span className="area-head">Software Engineering, IT Management</span> -
                 I love to do things from scratch and plan them first!
                 I'm really excited with implementing software design
                 that I created by myself, basing on user's requirements,
                 interviews and user's stories. I deeply believe in agile
                 methodologies so I follow them as much as I can!</li>
-                <li><span>Software architecture</span> -
+                <li><span className="area-head">Software architecture</span> -
                 I'm focused on developing my knowledge and skills in this area.
                 I find microservices approach incredibly clever and innovative
                 - that's why I'm exploring this idea in the context of Cloud
                 Computing. I'm still not experienced so I'll be pleased to
                 exchange thoughts in this area.</li>
-                <li><span>Software security</span> -
+                <li><span className="area-head">Software security</span> -
                 I feel big respect for this sector of IT! It's very important
                 and we still(!) are not taking it for granted! Every time I
                 face some access security issue I try to push the frontier of
