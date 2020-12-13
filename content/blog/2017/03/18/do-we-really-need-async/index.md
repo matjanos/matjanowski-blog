@@ -3,9 +3,9 @@ title: Managing options and secrets in .NET Core and Docker
 date: "2017-03-18"
 ---
 
-The syntactic sugars are helpful features of C# language. We can use `using(var tmp = new ...()) {}` instead of `Dispose()`, we have common `foreach` instead of `while` loop with iterating enumerator, and we have `await` and `async`. But think a while… do we really need `async` word?
+The syntactic sugars are helpful features of C## language. We can use `using(var tmp = new ...()) {}` instead of `Dispose()`, we have common `foreach` instead of `while` loop with iterating enumerator, and we have `await` and `async`. But think a while… do we really need `async` word?
 
-# The world without async
+## The world without async
 
 Well, let’s look at the basic example of asynchronous method in C#:
 
@@ -39,7 +39,7 @@ Task<int> AccessTheWebAsync()
 
 The code above should work, as we have `await` keyword and return type is `Task<int>`. Looks good. This guy is asynchronous. But wait again… what if… Damn!
 
-# Backward compatibility
+## Backward compatibility
 
 Imagine, that you wrote code before .NET 4, when `async` and `await` didn’t exist in C#.
 
@@ -85,8 +85,8 @@ This piece of code seems to be valid in older .NET, but if we want to use asychr
 
 Essentially that’s the reason why Microsoft introduced `async` – to keep backward compatibility by enforcing implicit declaration that a method invokes asynchronous code.
 
-# `async` as a variable name
-I like simple syntax in languages, so I believe that this artificial impediment could be avoided, but being more restrictive on upgrading to C# 5. The simple solution is just forbidding to use await keyword as a variable identifier. Microsoft didn’t do that, so we can have a method like this, which has valid syntax:
+## `async` as a variable name
+I like simple syntax in languages, so I believe that this artificial impediment could be avoided, but being more restrictive on upgrading to C## 5. The simple solution is just forbidding to use await keyword as a variable identifier. Microsoft didn’t do that, so we can have a method like this, which has valid syntax:
 
 ```csharp
 public static int Test(int await)

@@ -7,7 +7,7 @@ date: "2017-11-18"
 
 I’m going to show you how do I solve the problem of managing configuration in .NET Core, including multiple environments, secrets and Docker.
 
-# App Settings
+## App Settings
 
 First of all: where do we use configuration? Of course there is no simple answer for that and it always depends, but my strategy for this is following. Each time when you use some constant (regardless of having them in the constant field or just used value) ask yourself: “Might this value ever change?”. If the answer is “yes” or “maybe” you should put it into a configuration value.
 
@@ -104,7 +104,7 @@ public class HomeController : Controller
 ```
 Depending on the running environment I get different results on my view:
 ![Difference between environments](./ProdVsDev.png)
-# Secrets
+## Secrets
 There is a temptation to use app settings to all kinds of variable config values, but there are some which should not be saved in the `appsettings.json`.
 
 DO NOT SAVE IN `appsettings.json` FOLLOWING SETTINGS:
@@ -174,7 +174,7 @@ Additionally some tweaks in the view and…. the result is:
 ![User secrets result](./UserSecrets_result.png)
 
 You can distribute secret values to developers in some safe way, but remember that those values are used only for development purposes.
-# Secrets in Docker
+## Secrets in Docker
 Once Microsoft went OpenSource and the hell got frozen, they also started to be open for many external tools like Docker. Microsoft started using Docker for internal projects but also added very good support for it in Visual Studio 2017. But if we run our app in a container, we are loosing an access to the `secrets.json` stored somewhere on the host machine. Let’s tackle this problem. I’m starting with adding Docker support via VS2017. Again, right-click → Add → Docker support. It’ll ask for a version of container and I’m choosing Linux. Next steps will depend of this decision.
 ![Add docker spport](add_docker_support.png)
 
@@ -214,5 +214,5 @@ _Note: If you’ve chosen Windows container when adding Docker support, you must
 
 There are some dedicated NuGet packages which support secrets inside [Docker swarm](https://docs.docker.com/engine/swarm/secrets/), but I’m not a fan of those. Your source code ought to be tools-agnostic so it shouldn’t know what development tools you’re using, whether it’s Docker, VMs or whatever.
 
-# Real-life suggestions
+## Real-life suggestions
 So if secrets are located only on my machine how the production app knows what are they? Of course we should place it on the production (or any remote environment) in some safety way during the deployment process. Very good solution is to use remote secrets vault (like Azure Key Vault or Vault from HashiCorp).
