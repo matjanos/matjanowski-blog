@@ -225,6 +225,9 @@ blockquote {
   font-style: italic;
   margin-bottom: var(--spacing-8);
 }
+blockquote > p {
+  margin-bottom: var(--spacing-5);
+}
 
 blockquote > :last-child {
   margin-bottom: var(--spacing-0);
