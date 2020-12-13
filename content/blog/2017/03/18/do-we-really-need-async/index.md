@@ -96,7 +96,3 @@ public static int Test(int await)
 ```
 
 In my opinion, if someone does so big step as moving to new version of a platform, (s)he’s prepared for some changes. Why not do require so simple one, like renaming identifiers?
-
-Do you agree? Write a comment!
-
-Cheers!
