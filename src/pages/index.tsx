@@ -10,6 +10,7 @@ const MainPage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Main" />
+      <div style={{ minHeight: '100%' }}></div>
     </Layout>
   )
 }

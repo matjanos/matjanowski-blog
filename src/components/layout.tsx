@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaGithub } from 'react-icons/fa';
+import { SiGmail } from 'react-icons/si';
 
 import Header from './header'
 import Navigation from "./nav"
@@ -29,15 +30,6 @@ const Layout = ({ location, title, children }) => {
   }
   else {
     mainLink = (<Link to="/">{data.site.siteMetadata.author.name}</Link>)
-    footer = <footer>
-      © {new Date().getFullYear()} Matjanowski
-      <div className="socials">
-        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/kubamatjanowski"><FaFacebookF /></a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/matjanowski"><FaLinkedinIn /></a>
-        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/matjanos"><FaTwitter /></a>
-        <a target="_blank" rel="noopener noreferrer" href="https://github.com/matjanos"><FaGithub /></a>
-      </div>
-  </footer>
   }
 
   return (
@@ -49,7 +41,16 @@ const Layout = ({ location, title, children }) => {
       </div>
       <header className="global-header">{header}</header>
       <main>{children}</main>
-      {footer}
+      <footer>
+        © {new Date().getFullYear()} Matjanowski
+        <div className="socials">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/kubamatjanowski"><FaFacebookF /></a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/matjanowski"><FaLinkedinIn /></a>
+          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/matjanos"><FaTwitter /></a>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/matjanos"><FaGithub /></a>
+          <a href="mailto:kuba@matjanowski.pl "><SiGmail /></a>
+        </div>
+      </footer>
     </div>
   )
 }
