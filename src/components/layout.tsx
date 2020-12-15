@@ -34,13 +34,15 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <div className="navigation">
-        {mainLink}
-        <Navigation />
-        <div style={{ clear: 'both' }}></div>
+      <div className="main-container">
+        <div className="navigation">
+          {mainLink}
+          <Navigation />
+          <div style={{ clear: 'both' }}></div>
+        </div>
+        <header className="global-header">{header}</header>
+        <main>{children}</main>
       </div>
-      <header className="global-header">{header}</header>
-      <main>{children}</main>
       <footer>
         © {new Date().getFullYear()} Matjanowski
         <div className="socials">
