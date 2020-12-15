@@ -76,6 +76,7 @@ html {
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 body {
@@ -83,6 +84,7 @@ body {
   font-size: var(--fontSize-1);
   color: var(--color-text);
   background-image: var(--background-image);
+  height: 100%;
 }
 
 footer {
@@ -284,10 +286,22 @@ a:focus {
   text-decoration: none;
 }
 
+#___gatsby {
+  height: 100%;
+}
+
+#gatsby-focus-wrapper {
+  height: 100%;
+}
+
+.main-container{
+  min-height: calc(100% - 120px);
+}
+
 /* Custom classes */
 .navigation {
-  margin-top: var(--spacing-3);
-  margin-bottom: var(--spacing-5);
+  padding-top: var(--spacing-3);
+  padding-bottom: var(--spacing-5);
 }
 
 .navigation>nav {
@@ -306,6 +320,7 @@ a:focus {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-0) var(--spacing-5);
+  height: 100%;
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
