@@ -3,13 +3,17 @@ module.exports = {
     title: `Kuba Matjanowski`,
     author: {
       name: `Kuba Matjanowski`,
-      summary: `who lives and works in San Francisco building useful things.`,
     },
     description: `Kuba Matjanowski portfolio site`,
     siteUrl: `https://matjanowski.pl/`,
     social: {
-      twitter: `matanos`,
+      twitter: `matjanos`,
     },
+    commentsSettings:{
+      apiTemplate:"https://api.github.com/repos/{organisationName}/{repo}/issues/{issueNo}/comments",
+      organisationName:"octocat",
+      repoName:"hello-world"
+    }
   },
   plugins: [{
       resolve: `gatsby-source-filesystem`,

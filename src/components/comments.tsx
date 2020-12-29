@@ -1,4 +1,5 @@
 import React from "react"
+import { BiCommentError } from "react-icons/bi"
 
 interface CommentsProps {
     issueNo: number
@@ -54,11 +55,15 @@ export default class Comments extends React.Component<CommentsProps, CommentsSta
     }
 
     renderComment(comment: IComment) {
-        return <div>
-            <img src={comment.avatarUrl} />
-            <span><a href={comment.authorUrl}>{comment.authorName}</a></span>
-            <span>{comment.date}</span>
-            <span>{comment.body}</span>
+        return <div className="comment">
+            <header>
+                <a href={comment.authorUrl}>
+                    <img src={comment.avatarUrl} className="comment-author-avatar" />
+                    <span className="comment-author">{comment.authorName}</span>
+                </a>
+                <span className="comment-date">{comment.date.toDateString()}</span>
+            </header>
+            <span className="comment-body">{comment.body}</span>
         </div>
     }
 
@@ -67,7 +72,7 @@ export default class Comments extends React.Component<CommentsProps, CommentsSta
             .map(i => {
                 return {
                     body: i.body,
-                    date: i.date,
+                    date: new Date(i.created_at),
                     authorName: i.user.login,
                     authorUrl: i.user.html_url,
                     avatarUrl: i.user.avatar_url,
@@ -88,12 +93,13 @@ export default class Comments extends React.Component<CommentsProps, CommentsSta
         }
         if (this.state.items)
             if (!this.state.items.length) {
-                return <div>
-                    No comments in issuse {this.issueNo}.
-                 </div>
+                return <div className="empty-state">
+                    <div className="empty-state-icon"> <BiCommentError /></div>
+                    <a href={`https://github.com/octocat/Hello-World/issues/${this.issueNo}`}>Add a comment with GitHub</a>
+                </div >
             }
             else {
-                return <div>{this.renderAllComments(this.state.items)}</div>
+                return <div className="comments-wrapper">{this.renderAllComments(this.state.items)}</div>
             }
     }
 }
