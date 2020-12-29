@@ -95,7 +95,7 @@ export default class Comments extends React.Component<CommentsProps, CommentsSta
             if (!this.state.items.length) {
                 return <div className="empty-state">
                     <div className="empty-state-icon"> <BiCommentError /></div>
-                    <a href={`https://github.com/octocat/Hello-World/issues/${this.issueNo}`}>Add a comment with GitHub</a>
+                    <a target="_blank" rel="noopener noreferrer" href={`https://github.com/octocat/Hello-World/issues/${this.issueNo}`}>Add a comment with GitHub</a>
                 </div >
             }
             else {
