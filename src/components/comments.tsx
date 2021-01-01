@@ -1,6 +1,7 @@
 import { graphql } from "gatsby";
 import React from "react"
 import { BiCommentError } from "react-icons/bi"
+import Loader from 'react-loader-spinner'
 
 interface CommentsProps {
     issueNo: number
@@ -91,13 +92,17 @@ export default class Comments extends React.Component<CommentsProps, CommentsSta
     }
 
     renderLoading() {
-        return <div>
-            Loading...
+        return <div className="comment-info"><Loader
+            type="ThreeDots"
+            color="#F0563D"
+            height={100}
+            width={100}>
+        </Loader>
         </div>
     }
 
     renderCommentsDisabled() {
-        return <div>Comments are disabled for this post.</div>;
+        return <div className="comment-info">Comments are disabled for this post.</div>;
     }
 
     renderError(error: any) {
