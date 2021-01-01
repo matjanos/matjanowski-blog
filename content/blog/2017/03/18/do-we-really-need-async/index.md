@@ -1,6 +1,7 @@
 ---
-title: Managing options and secrets in .NET Core and Docker
+title: Do we really need async?
 date: "2017-03-18"
+commentsIssueId: 6
 ---
 
 The syntactic sugars are helpful features of C# language. We can use `using(var tmp = new ...()) {}` instead of `Dispose()`, we have common `foreach` instead of `while` loop with iterating enumerator, and we have `await` and `async`. But think a while… do we really need `async` word?
