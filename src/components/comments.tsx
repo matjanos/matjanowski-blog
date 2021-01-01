@@ -2,6 +2,9 @@ import { graphql } from "gatsby";
 import React from "react"
 import { BiCommentError } from "react-icons/bi"
 import Loader from 'react-loader-spinner'
+import ReactMarkdown from 'react-markdown'
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 interface CommentsProps {
     issueNo: number
@@ -25,6 +28,12 @@ export default class Comments extends React.Component<CommentsProps, CommentsSta
     issueNo: number;
     apiUrl = 'https://api.github.com/repos/matjanos/matjanowski-blog/';
     githubUrl = 'https://github.com/matjanos/matjanowski-blog/';
+    renderers = {
+        code: ({language, value}) => {
+          return <SyntaxHighlighter style={vscDarkPlus} language={language} children={value} />
+        }
+      }
+      
     constructor(props) {
         super(props);
         this.issueNo = props.issueNo;
@@ -67,7 +76,7 @@ export default class Comments extends React.Component<CommentsProps, CommentsSta
                 </a>
                 <span className="comment-date">{comment.date.toDateString()}</span>
             </header>
-            <span className="comment-body">{comment.body}</span>
+            <span className="comment-body"><ReactMarkdown renderers={this.renderers} >{comment.body}</ReactMarkdown></span>
         </div>
     }
 
