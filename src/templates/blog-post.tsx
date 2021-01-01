@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Comments from "../components/comments"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -10,7 +11,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data
 
   return (
-    <Layout location={location} title={siteTitle}>
+    < Layout location={location} title={siteTitle} >
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -30,6 +31,9 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr />
       </article>
+      <div className="comments">
+        <Comments issueNo={post.frontmatter.commentsIssueId} />
+      </div>
       <nav className="blog-post-nav">
         <ul
           style={{
@@ -56,7 +60,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
-    </Layout>
+    </Layout >
   )
 }
 
@@ -81,6 +85,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        commentsIssueId
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
