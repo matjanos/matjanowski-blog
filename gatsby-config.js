@@ -9,10 +9,10 @@ module.exports = {
     social: {
       twitter: `matjanos`,
     },
-    commentsSettings:{
-      apiTemplate:"https://api.github.com/repos/{organisationName}/{repo}/issues/{issueNo}/comments",
-      organisationName:"octocat",
-      repoName:"hello-world"
+    commentsSettings: {
+      apiTemplate: "https://api.github.com/repos/{organisationName}/{repoName}/issues/{issueNo}/comments",
+      organisationName: "matjanos",
+      repoName: "matjanowski-blog"
     }
   },
   plugins: [{

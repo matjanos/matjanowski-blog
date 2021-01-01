@@ -1,3 +1,4 @@
+import { graphql } from "gatsby";
 import React from "react"
 import { BiCommentError } from "react-icons/bi"
 
@@ -21,9 +22,10 @@ interface IComment {
 
 export default class Comments extends React.Component<CommentsProps, CommentsState> {
     issueNo: number;
+    apiUrl = 'https://api.github.com/repos/matjanos/matjanowski-blog/';
+    githubUrl = 'https://github.com/matjanos/matjanowski-blog/';
     constructor(props) {
         super(props);
-        console.log(props);
         this.issueNo = props.issueNo;
         this.state = {
             error: null,
@@ -33,7 +35,11 @@ export default class Comments extends React.Component<CommentsProps, CommentsSta
     }
 
     componentDidMount() {
-        fetch(`https://api.github.com/repos/octocat/hello-world/issues/${this.issueNo}/comments`)
+        this.getComments();
+    }
+
+    private getComments() {
+        fetch(`${this.apiUrl}issues/${this.issueNo}/comments`)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -42,16 +48,13 @@ export default class Comments extends React.Component<CommentsProps, CommentsSta
                         items: result
                     });
                 },
-                // Note: it's important to handle errors here
-                // instead of a catch() block so that we don't swallow
-                // exceptions from actual bugs in components.
                 (error) => {
                     this.setState({
                         isLoaded: true,
                         error
                     });
                 }
-            )
+            );
     }
 
     renderComment(comment: IComment) {
@@ -81,25 +84,61 @@ export default class Comments extends React.Component<CommentsProps, CommentsSta
             .map(c => this.renderComment(c));
     }
 
+    renderNewCommentLink() {
+        return <div className="link-wrapper">
+            <a className="add-comment-lnk" target="_blank" rel="noopener noreferrer" href={`${this.githubUrl}issues/${this.issueNo}`}>Add a comment with GitHub</a>
+        </div>
+    }
+
+    renderLoading() {
+        return <div>
+            Loading...
+        </div>
+    }
+
+    renderCommentsDisabled() {
+        return <div>Comments are disabled for this post.</div>;
+    }
+
+    renderError(error: any) {
+        return <span>Error on getting comments: {error}</span>
+    }
+
     render() {
-        console.log(this.state);
+        if (!this.issueNo) {
+            return this.renderCommentsDisabled();
+        }
         if (!this.state.isLoaded) {
-            return <div>
-                Loading...
-                </div>
+            return this.renderLoading();
         }
         if (this.state.error) {
-            <span>Error on getting comments: {this.state.error}</span>
+            return this.renderError(this.state.error)
         }
         if (this.state.items)
             if (!this.state.items.length) {
                 return <div className="empty-state">
                     <div className="empty-state-icon"> <BiCommentError /></div>
-                    <a target="_blank" rel="noopener noreferrer" href={`https://github.com/octocat/Hello-World/issues/${this.issueNo}`}>Add a comment with GitHub</a>
+                    {this.renderNewCommentLink()}
                 </div >
             }
             else {
-                return <div className="comments-wrapper">{this.renderAllComments(this.state.items)}</div>
+                return <div className="comments-wrapper">{this.renderAllComments(this.state.items)}
+                    {this.renderNewCommentLink()}
+                </div>
             }
     }
 }
+
+export const query = graphql`
+    {
+        site{
+            siteMetadata{
+                commentsSettings{
+                    apiTemplate
+                    organisationName
+                    repoName
+                }
+            }
+        }
+    }  
+`

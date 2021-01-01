@@ -394,7 +394,7 @@ a:focus {
 
 .comments-wrapper {
   border: #1a202c;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .empty-state {
@@ -402,16 +402,25 @@ a:focus {
   margin: 50px auto 50px auto;
 }
 
-.empty-state>a {
+.link-wrapper{
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+
+}
+
+.add-comment-lnk {
   border: 1px solid #dbdbdb;
   padding: 10px 20% 10px 20%;
   border-radius: 20px;
   text-transform: uppercase;
   text-decoration: none;
   font-family: var(--font-heading);
+  margin: 10px auto 10px auto;
 }
 
-.empty-state>a:hover {
+.add-comment-lnk:hover {
   border-color: #b5b5b5;
 }
 
@@ -436,6 +445,7 @@ a:focus {
 .comment>header {
   background-color: #f6f8fa;
   height: 25px;
+  padding-right: 5px;
 }
 
 .comment>.comment-body {

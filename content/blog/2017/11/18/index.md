@@ -1,7 +1,7 @@
 ---
 title: Managing options and secrets in .NET Core and Docker
 date: "2017-11-18"
-commentsIssueId: 26123
+commentsIssueId: 3
 ---
 
 .NET Core comes with tens of good patterns and helpers which are supposed to help developers to create high quality code which is easy to maintain and fast to develop. Numerous tools help us to be more productive but also encourage us to be responsible for our code and developer assets.
