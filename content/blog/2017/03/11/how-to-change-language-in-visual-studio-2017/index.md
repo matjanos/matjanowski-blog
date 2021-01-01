@@ -1,6 +1,7 @@
 ---
 title: How to change language in Visual Studio 2017/2019
 date: "2017-03-11T22:12:03.284Z"
+commentsIssueId: 5
 ---
 
 Engineers love the new tools – that’s a fact. New IDE release is kind of Christmast Eve for all developers of a platform. Releasing Visual Studio 2017 is not an exception!
