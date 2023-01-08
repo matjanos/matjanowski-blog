@@ -1,6 +1,6 @@
 ## 🧐 What's that?
 
-This is my personal blog available on [matjanowski.pl](https://www.blog.matjanowski.pl), created with [Gatsby](https://www.gatsbyjs.com/). Here I share  tutorials or technical challenges I faced recently and my thoughts about IT in general.  
+This is my personal blog available on [matjanowski.pl](https://blog.matjanowski.pl), created with [Gatsby](https://www.gatsbyjs.com/). Here I share  tutorials or technical challenges I faced recently and my thoughts about IT in general.  
 
 ## 💬 Comments
 
