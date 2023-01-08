@@ -1,11 +1,14 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "matjanowski-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Private tech blog",
+  "version": "1.0.0",
+  "author": "Jakub Matjanowski <kuba@matjanowski.pl>",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/matjanos/matjanowski-blog/issues"
   },
   "dependencies": {
     "gatsby": "5.3.3",
