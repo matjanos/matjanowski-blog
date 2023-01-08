@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { graphql,  useStaticQuery } from "gatsby"
 import React from "react"
 import { BiCommentError } from "react-icons/bi"
 import { ThreeDots } from "react-loader-spinner"
@@ -186,7 +186,7 @@ export default class Comments extends React.Component<
   }
 }
 
-export const query = graphql`
+export const query = useStaticQuery(graphql`
   {
     site {
       siteMetadata {
@@ -198,4 +198,4 @@ export const query = graphql`
       }
     }
   }
-`
+`)

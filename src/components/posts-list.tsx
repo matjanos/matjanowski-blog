@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 
 const PostsList = ({ data }) => {
@@ -43,7 +43,7 @@ const PostsList = ({ data }) => {
 
 export default PostsList
 
-export const pageQuery = graphql`
+export const pageQuery = useStaticQuery(graphql`
   query {
     allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {
@@ -59,4 +59,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`)
