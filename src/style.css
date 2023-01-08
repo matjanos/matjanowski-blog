@@ -434,6 +434,7 @@ a:focus {
   border-radius: 5px;
   font-family: var(--fontFamily-sans);
   margin-top: 30px;
+  background-color: #fff9f8;
 }
 
 .comment-date {
