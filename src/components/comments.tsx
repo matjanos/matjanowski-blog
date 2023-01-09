@@ -185,17 +185,3 @@ export default class Comments extends React.Component<
       }
   }
 }
-
-export const query = useStaticQuery(graphql`
-  {
-    site {
-      siteMetadata {
-        commentsSettings {
-          apiTemplate
-          organisationName
-          repoName
-        }
-      }
-    }
-  }
-`)
