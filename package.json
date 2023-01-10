@@ -38,7 +38,7 @@
     "react-markdown": "8.0.4",
     "react-syntax-highlighter": "15.5.0",
     "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "typeface-montserrat": "1.1.13"
   },
   "devDependencies": {
     "prettier": "2.8.2"
