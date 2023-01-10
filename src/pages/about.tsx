@@ -2,7 +2,7 @@ import React from "react"
 import { PageProps, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Avatar from "../components/avatar"
 
 type DataProps = {
@@ -16,7 +16,6 @@ const MeComponent: React.FC<PageProps<DataProps>> = ({
     location,
 }) => (
     <Layout title="About me" location={location}>
-        <SEO title="About me" />
         <h1>{path}</h1>
         <div style={{textAlign:'center', paddingBottom:'50px'}}>
             <Avatar/>
@@ -78,6 +77,7 @@ const MeComponent: React.FC<PageProps<DataProps>> = ({
     </Layout>
 )
 
+export const Head = () => <Seo title="About me" />
 export default MeComponent
 
 export const query = graphql`

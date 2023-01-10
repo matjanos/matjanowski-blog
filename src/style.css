@@ -486,3 +486,9 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+.avatar {
+  border-radius: 50%;
+  border: 10px solid #fbfbfb;
+  background: transparent;
+}
