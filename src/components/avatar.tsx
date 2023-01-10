@@ -4,7 +4,8 @@ import { StaticImage } from "gatsby-plugin-image"
 const Avatar = () => {
     return <div>
         <StaticImage
-            imgStyle={{ borderRadius: '50%', border: '10px solid #fbfbfb' }}
+            class="avatar"
+            width={200}
             src="../../content/assets/profile.jpg" alt="Profile" />
     </div>
 }
