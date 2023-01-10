@@ -37,7 +37,7 @@
     "react-loader-spinner": "5.3.4",
     "react-markdown": "8.0.4",
     "react-syntax-highlighter": "15.5.0",
-    "typeface-merriweather": "0.0.72",
+    "typeface-merriweather": "1.1.13",
     "typeface-montserrat": "1.1.13"
   },
   "devDependencies": {
