@@ -76,6 +76,7 @@ module.exports = {
         display: `minimal-ui`,
         icon: `content/assets/profile.jpg`,
       },
-    }
+    },
+    `gatsby-plugin-sitemap`,
   ],
 }
