@@ -1,3 +1,5 @@
+process.removeAllListeners('warning');
+
 module.exports = {
   siteMetadata: {
     title: `Kuba Matjanowski`,

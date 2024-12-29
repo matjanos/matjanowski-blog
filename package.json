@@ -11,15 +11,15 @@
     "url": "https://github.com/matjanos/matjanowski-blog/issues"
   },
   "dependencies": {
-    "gatsby": "5.11.0",
+    "gatsby": "^5.14.1",
     "gatsby-plugin-feed": "5.3.1",
     "gatsby-plugin-google-analytics": "5.3.0",
     "gatsby-plugin-google-tagmanager": "5.3.1",
     "gatsby-plugin-image": "^3.3.2",
-    "gatsby-plugin-manifest": "5.3.1",
-    "gatsby-plugin-offline": "6.3.1",
+    "gatsby-plugin-manifest": "^5.14.0",
+    "gatsby-plugin-offline": "^1.0.18",
     "gatsby-plugin-react-helmet": "6.3.0",
-    "gatsby-plugin-sharp": "5.3.2",
+    "gatsby-plugin-sharp": "^5.14.0",
     "gatsby-plugin-sitemap": "6.3.1",
     "gatsby-remark-copy-linked-files": "6.3.0",
     "gatsby-remark-images": "7.3.1",
@@ -28,7 +28,7 @@
     "gatsby-remark-smartypants": "6.3.0",
     "gatsby-source-filesystem": "5.3.1",
     "gatsby-transformer-remark": "6.3.2",
-    "gatsby-transformer-sharp": "5.3.1",
+    "gatsby-transformer-sharp": "^5.14.0",
     "prismjs": "1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -61,5 +61,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "resolutions": {
+    "punycode": "2.3.1"
   }
 }
