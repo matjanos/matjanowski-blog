@@ -388,6 +388,101 @@ a:focus {
   font-family: var(--fontFamily-sans);
 }
 
+.author-greeting {
+  margin-top: var(--spacing-4);
+  font-family: var(--font-heading);
+  font-size: var(--fontSize-1);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+}
+
+.author-tagline {
+  margin-top: var(--spacing-4);
+  font-family: var(--font-body);
+  font-size: var(--fontSize-2);
+  color: var(--color-text-light);
+}
+
+.name-highlight {
+  display: inline-flex;
+  align-items: center;
+}
+
+.name-tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.4em;
+  font-size: 0.18em;
+  cursor: default;
+}
+
+.name-tooltip-icon {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: var(--fontWeight-black);
+  font-size: 1.7em;
+  line-height: 1;
+  transform: translateY(-70%) rotate(-12deg);
+  transition: color 0.2s ease;
+}
+
+.name-tooltip:focus-visible .name-tooltip-icon,
+.name-tooltip:hover .name-tooltip-icon {
+  color: var(--color-heading-black);
+}
+
+.name-tooltip-bubble {
+  position: absolute;
+  bottom: calc(100% + 0.75rem);
+  left: 50%;
+  transform: translate(-50%, 0.5rem);
+  background: #fff;
+  color: var(--color-text);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  width: max-content;
+  max-width: 18rem;
+  text-transform: none;
+  font-size: var(--fontSize-0);
+  line-height: 1.4;
+  z-index: 5;
+  text-align: justify;
+}
+
+.name-tooltip:focus .name-tooltip-bubble,
+.name-tooltip:focus-visible .name-tooltip-bubble,
+.name-tooltip:hover .name-tooltip-bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+.name-tooltip-term {
+  display: block;
+  font-weight: var(--fontWeight-semibold);
+  text-align: left;
+  border-bottom: 1px solid var(--color-accent);
+  padding-bottom: 0.35rem;
+}
+
+.name-tooltip-phonetic {
+  font-style: italic;
+  margin-left: 0.25em;
+  font-size: 0.95em;
+}
+
+.name-tooltip-definition {
+  display: block;
+  margin-top: 0.35rem;
+}
+
 .area-head {
   font-weight: bold;
 }
