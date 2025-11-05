@@ -21,13 +21,12 @@ const MeComponent: React.FC<PageProps<DataProps>> = ({
             <Avatar/>
         </div>
         <p>
-            On web pages like this one, sections like this one are supposed to
-            introduce the author as a talented, clever, ambitious and confident
-            person. I have just about 20-30 seconds to gain your attention. First
-            I should prove that I'm awesome, but in so subtle way that you will be
-            convinced that I'm also modest, open for constructive criticism and
-            aware that there are a lot of things to learn. Will I do it? Let me
-            answer by quoting Shakespeare:
+            On pages like this, I'm expected to introduce myself as a talented,
+            clever, ambitious, and confident professional. Apparently I only have
+            about half a minute to earn your attention. The script says I should
+            prove I'm awesome while still convincing you I'm modest, open to
+            feedback, and painfully aware that there is always more to learn.
+            Will I pull it off? Let's ask Shakespeare:
         </p>
         <blockquote>
             <p>
@@ -38,41 +37,32 @@ const MeComponent: React.FC<PageProps<DataProps>> = ({
             </footer>
         </blockquote>
         <p>
-            Why? That's because I don't believe in everything that I read in
-            the Internet, so I want you not to do it either! I always want to
-            check out everything by myself, so I want you to do same! Text me,
-            interview me, talk with me and ascertain that I'm the one you need!
-            To have a pleasent conversation we should have a background about our
-            interests and hobbies! Here are some of mine:
-            <ul>
-                <li><span className="area-head">Software Engineering, IT Management</span> -
-                I love to do things from scratch and plan them first!
-                I'm really excited with implementing software design
-                that I created by myself, basing on user's requirements,
-                interviews and user's stories. I deeply believe in agile
-                methodologies so I follow them as much as I can!</li>
-                <li><span className="area-head">Software architecture</span> -
-                I'm focused on developing my knowledge and skills in this area.
-                I find microservices approach incredibly clever and innovative
-                - that's why I'm exploring this idea in the context of Cloud
-                Computing. I'm still not experienced so I'll be pleased to
-                exchange thoughts in this area.</li>
-                <li><span className="area-head">Software security</span> -
-                I feel big respect for this sector of IT! It's very important
-                and we still(!) are not taking it for granted! Every time I
-                face some access security issue I try to push the frontier of
-                my knowledge in this field.</li>
-            </ul>
-            Am I a geek? Yes I am. But it is said that a successful professional
-            is able to find a perfect work-life balance by being passionate not
-            only with one's work but also having other interests. Here are some
-            of mine:
-            <ul>
-                <li> astronomy</li>
-                <li>theology</li>
-                <li>football (english Premiership)</li>
-                <li>politics</li>
-            </ul>
+            Why the dramatic refusal? Because I don't believe everything I read
+            on the internet, and I'd prefer if you didn't either. I like to check
+            things myself, so reach out: text me, interview me, talk with me, and
+            see for yourself whether I'm the person you need. To make that
+            conversation easier, here are a few areas that keep me energised:
+        </p>
+        <ul>
+            <li><span className="area-head">Software Engineering & Technical Leadership</span> - I shape healthy engineering environments, trimming redundant work, boosting efficiency, and aligning teams with business goals. Need rapid growth and fast deployments? I can tune the process for speed. Need hyper-resilient, zero-drama production? I can build for that too. Better visibility, sharper CI pipelines, and purposeful feedback loops are the levers I like to pull.</li>
+            <li><span className="area-head">Software Architecture</span> - I'm steadily deepening my experience here. Microservices fascinate me, especially how they pair with cloud computing. I'm always up for comparing notes and exploring different approaches.</li>
+            <li><span className="area-head">Applied AI</span> - I strongly believe we're in the middle of a true AI revolution—not the gimmick of bolting a chat widget onto every page, but a thoughtful use of tools that amplify human judgment. Assisted coding, agentic workflows, and eval-driven experimentation are the kinds of applications that get me excited.</li>
+            <li><span className="area-head">Software Security</span> - This space keeps me humble. Each time I brush against an access or data protection challenge, I take the opportunity to push my understanding forward.</li>
+        </ul>
+        <p>
+            Am I a geek? Absolutely. But the best professionals I know pair that
+            intensity with a healthy sense of curiosity beyond work. Here are a
+            few of the topics that keep me inspired outside the code editor:
+        </p>
+        <ul>
+            <li>mountaineering</li>
+            <li>sports</li>
+            <li>philosophy</li>
+            <li>politics</li>
+        </ul>
+        <p>
+            If any of that resonates, let's chat. I'm always up for a thoughtful
+            conversation and a new challenge.
         </p>
     </Layout>
 )
